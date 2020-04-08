@@ -1,0 +1,20 @@
+{
+    "name": "romanato/php-coloringo-cli",
+    "description": "Colors and styles for PHP CLI output.",
+    "type": "library",
+    "require": {
+        "php": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman",
+            "email": "romikor1999@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Romanato\\ColoringoCLI\\": "src//"
+        }
+    }
+}
