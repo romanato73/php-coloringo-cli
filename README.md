@@ -77,20 +77,26 @@ Available attributes are: `color`, `background`, `style`
 
 ## Methods
 
-You can use also some methods that are made just for you.
+#### out(`string` $message [, `string|array` $attributes])
+This method makes an output into CLI **with** a new line at the end.
+```php
+print $console->out($output, $attributes);
+```
+
+#### inline(`string` $message [, `string|array` $attributes])
+This method makes an output into CLI **without** a new line at the end.
+```php
+print $console->inline($output, $attributes);
+```
 
 #### newLine()
-
 This method creates a new line.
-
 ```php
 print $console->newLine();
 ```
 
 #### isSupported()
-
 Checks if the php script is running via CLI.
-
 ```php
 print $console->isSupported();
 ```
@@ -101,33 +107,31 @@ Properties of the class are basically the configuration of all colors and styles
 You can see all available attributes and their values.
 
 #### color
-
-You can see all supported (foreground) colors.
-
+Shows all supported (foreground) colors.
 ```php
 print $console->color;
 ```
 
 #### background
-
-You can see all supported (background) colors.
-
+Shows all supported (background) colors.
 ```php
 print $console->background;
 ```
 
 #### style
-
-You can see all supported styles.
-
+Shows all supported styles.
 ```php
 print $console->style;
 ```
 
+#### attributes
+Shows all supported attributes.
+```php
+print $console->attributes;
+```
+
 ## Customization
-
 You can set your own colors and styles very easily by editing: `Coloringo.php` class.
-
 ```php
 class Coloringo
 {

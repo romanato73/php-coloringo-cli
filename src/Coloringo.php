@@ -105,6 +105,16 @@ class Coloringo
     }
 
     /**
+     * Print a new line.
+     *
+     * @return string
+     */
+    public function newLine()
+    {
+        return "\n";
+    }
+
+    /**
      * Sets the style for the string.
      *
      * @param string|array $attributes
@@ -164,19 +174,9 @@ class Coloringo
      *
      * @return string
      */
-    protected function clearStyles()
+    private function clearStyles()
     {
         return "\e[0m";
-    }
-
-    /**
-     * Print a new line.
-     *
-     * @return string
-     */
-    public function newLine()
-    {
-        return "\n";
     }
 
     /**
@@ -188,4 +188,8 @@ class Coloringo
     {
         return php_sapi_name() == 'cli' ? true : false;
     }
+
+    /**
+     * TODO: Remove print ??
+     */
 }
